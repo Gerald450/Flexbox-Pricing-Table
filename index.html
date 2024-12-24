@@ -11,11 +11,71 @@
     <style>
       body {
         font-family: "Sono", sans-serif;
+        background-color: antiquewhite;
       }
 
-      /* Hint: What can you do with a media query and flexbox? */
-      @media (max-width: 1250px) {
+      ul{
+        list-style-type: none;
       }
+
+      .pricing-plan{
+        background-color: lightblue;
+        flex-basis: 250px;
+        text-align: center;
+        border-radius: 20%;
+        height: 200px;
+        padding: 10px;
+        position: relative
+      }
+
+      .pricing-container{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-direction: row;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .plan-title{
+        font-size: 0.9rem;
+      }
+
+      .plan-price{
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .plan-button{
+        position: relative;
+        top: 12px;
+        border-radius: 10%;
+        border: 10px;
+        border-color: white;
+        background-color: orange;
+        font-size: 0.9rem;
+      }
+
+
+      @media (max-width: 1250px){
+
+        .pricing-container{
+          flex-direction: column;
+          gap: 25px;
+          height: 100vh;
+          align-items: center;
+        }
+
+        .pricing-plan{
+          flex-basis: 200px;
+          width: 250px;
+        }
+
+      }
+
+
+
+      /* Hint: What can you do with a media query and flexbox? */
     </style>
   </head>
 
@@ -39,7 +99,7 @@
           <li>✅ 5 Users</li>
           <li>✅ Phone &amp; Email Support</li>
         </ul>
-        <button class="plan-button">Sign Up</button>
+        <button style="top:-5px" class="plan-button">Sign Up</button>
       </div>
       <div class="pricing-plan">
         <div class="plan-title">Premium</div>
